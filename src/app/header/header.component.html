@@ -1,0 +1,206 @@
+<!-- <div class="header-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="top-left text-center text-md-left">
+          <h6>Opening Hours : Monday to Saturday - 8am to 8pm</h6>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="top-right text-center text-md-right">
+          <ul class="social-links">
+            <li>
+              <a href="https://themefisher.com/" aria-label="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://themefisher.com/" aria-label="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://themefisher.com/" aria-label="google-plus">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://themefisher.com/" aria-label="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://themefisher.com/" aria-label="pinterest">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="header-uper">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-4 col-lg-3">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              loading="lazy"
+              class="img-fluid"
+              height="90px"
+              width="90px"
+              src="/assets/images/uddhar_logo.PNG"
+              alt="logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="col-xl-8 col-lg-9">
+        <div class="right-side">
+          <ul class="contact-info pl-0 mb-4 mb-md-0">
+            <li class="item text-left">
+              <div class="icon-box">
+                <i class="fas fa-phone"></i>
+              </div>
+              <strong>Call Uddhar Right Now</strong>
+              <br />
+              <span>+ (91) 9429991488</span>
+            </li>
+            <li class="item text-left">
+              <div class="icon-box">
+                <i class="far fa-envelope"></i>
+              </div>
+              <strong>Email Us</strong>
+              <br />
+              <a href="mailto:uddhar2021@gmail.com">
+                <span>uddhar2021@gmail.com</span>
+              </a>
+            </li>
+
+          </ul>
+          <div class="link-btn text-center text-lg-right">
+            <a
+              *ngIf="!isLoggedIn"
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+              class="btn-style-one"
+              >Signup / Login</a
+            >
+            <a
+              *ngIf="isLoggedIn"
+              [routerLink]="['/']"
+              routerLinkActive="router-link-active"
+              class="btn-style-one"
+              (click)="logout()"
+              >Logout</a
+            >
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="main">
+  <mdb-navbar
+    SideClass="navbar navbar-expand-lg navbar-dark py-3"
+    [containerInside]="false"
+  >
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#"></a></mdb-navbar-brand>
+    <!-- Collapsible content -->
+    <links>
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >Home</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['/service']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >Service</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['/pet-care']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >Pet Care</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['/aboutus']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['/contactus']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >Contact Us</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link waves-light ml-5"
+            [routerLink]="['/team']"
+            routerLinkActive="router-link-active"
+            mdbWavesEffect
+            >Team Members</a
+          >
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <!-- <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="google-plus"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul> -->
+    </links>
+  </mdb-navbar>
+</div>
